@@ -1,0 +1,72 @@
+{
+    "pt": {
+        "meta": {
+            "title": "Nutrição Esportiva - Performance e Saúde",
+            "lang": "pt-br"
+        },
+        "header": {
+            "logo": "NutriPower",
+            "menu": {
+                "produtos": "Produtos",
+                "promocoes": "Promoções",
+                "quemSomos": "Quem Somos",
+                "contato": "Contato"
+            }
+        },
+        "hero": {
+            "titulo": "Performance e Saúde em Equilíbrio",
+            "subtitulo": "Suplementos de alta qualidade para atletas e entusiastas do fitness",
+            "botao": "Conheça nossos produtos"
+        },
+        "secoes": {
+            "produtos": "Nossos Produtos",
+            "promocoes": "Promoções",
+            "quemSomos": "Quem Somos",
+            "contato": "Contato"        
+        },
+        "contato": {
+                "instagram":"@suplementos_nutripower",
+                "facebook": "@suplementos_nutripower",
+                "email": "produtosnutripower@gmail.com",
+                "whatsapp": "(85)9823-67462"
+            },
+        "footer": {
+            "copyright": "© NutriPower - Todos os direitos reservados"
+        }
+    },
+    "en": {
+        "meta": {
+            "title": "Sports Nutrition - Performance and Health",
+            "lang": "en"
+        },
+        "header": {
+            "logo": "NutriPower",
+            "menu": {
+                "produtos": "Products",
+                "promocoes": "Promotions",
+                "quemSomos": "About Us",
+                "contato": "Contact"
+            }
+        },
+        "hero": {
+            "titulo": "Performance and Health in Balance",
+            "subtitulo": "High quality supplements for athletes and fitness enthusiasts",
+            "botao": "Discover our products"
+        },
+        "secoes": {
+            "produtos": "Our Products",
+            "promocoes": "Promotions",
+            "quemSomos": "About Us",
+            "contato": "Contact"
+        },
+        "contato": {
+                "instagram":"@suplementos_nutripower",
+                "facebook": "@suplementos_nutripower",
+                "email": "produtosnutripower@gmail.com",
+                "whatsapp": "(85)9823-67462"
+            },
+        "footer": {
+            "copyright": "© NutriPower - All rights reserved"
+        }
+    }
+}
