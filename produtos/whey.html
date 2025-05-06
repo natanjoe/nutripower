@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Nome do produto -->
+  <title>Whey Protein 1kg | Sua Loja</title>
+  <!-- Descrição curta e clara do produto -->
+  <meta name="description" content="Proteína isolada de alta qualidade - Whey Protein 1kg" />
+
+  <!-- Snipcart Required Product Meta Tags -->
+  <meta property="og:title" content="Whey Protein 1kg" />
+  <meta property="og:description" content="Proteína isolada de alta qualidade" />
+  <!-- URL completa da imagem (de preferência HTTPS com domínio público/visível) -->
+  <meta property="og:image" content="https://seusite.com/images/whey.jpg" />
+  <meta property="og:url" content="https://seusite.com/produtos/whey-1kg.html" />
+  <meta property="og:type" content="product" />
+
+  <!-- Preço do produto em decimal -->
+  <!-- Preço e moeda (Snipcart pode usar isso, dependendo da configuração) -->
+  <meta property="product:price:amount" content="99.90" />
+  <!--  "BRL" para reais -->
+  <meta property="product:price:currency" content="BRL" />
+
+  <!-- Snipcart -->
+  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+  <!-- Sua API Key pública do Snipcart (pegue no dashboard deles) -->
+  <div hidden id="snipcart" data-api-key="NDRjMjBhNTQtYTQ5MC00ZTg5LWFlZDctN2RjYzYyOTk5MmI1NjM4ODE4MTc5NzQwMzU0NTQ2"></div>
+</head>
+<body>
+  <main>
+    <h1>Whey Protein 1kg</h1>
+    <img src="https://seusite.com/images/whey.jpg" alt="Whey Protein 1kg" width="300" />
+
+    <p>Proteína isolada de alta qualidade</p>
+    <p><strong>R$ 99,90</strong></p>
+
+    <!-- Botão de compra do Snipcart -->
+    <!-- Um identificador único para cada produto -->
+    <!-- data-item-url A mesma URL pública onde o produto está acessível -->
+    <button 
+      class="snipcart-add-item"
+      data-item-id="whey-1kg"
+      data-item-name="Whey Protein 1kg"
+      data-item-price="99.90"
+      data-item-url="https://seusite.com/produtos/whey-1kg.html"
+      data-item-description="Proteína isolada de alta qualidade"
+      data-item-image="https://seusite.com/images/whey.jpg"
+    >
+      Comprar
+    </button>
+  </main>
+</body>
+</html>

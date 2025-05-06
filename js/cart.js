@@ -1,5 +1,37 @@
-class ShoppingCart {
+// cart.js
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Escutador para eventos do Snipcart (opcional, útil para feedback e debug)
+  document.addEventListener('snipcart.ready', () => {
+    console.log('Snipcart está pronto.');
+
+    Snipcart.events.on('item.added', (cartItem) => {
+      console.log(`Produto adicionado ao carrinho: ${cartItem.name} - R$ ${cartItem.price}`);
+    });
+
+    Snipcart.events.on('item.removed', (cartItem) => {
+      console.log(`Produto removido do carrinho: ${cartItem.name}`);
+    });
+  });
+
+  // Alternativamente, você pode logar quando o botão for clicado
+  document.querySelectorAll('.snipcart-add-item').forEach(button => {
+    button.addEventListener('click', function () {
+      console.log('Clique no botão Adicionar ao Carrinho:', {
+        id: this.dataset.itemId,
+        name: this.dataset.itemName,
+        price: this.dataset.itemPrice
+      });
+    });
+  });
+});
+
+
+
+
+//Comentada o código da classe anterior para testar a nova versão fornecida pela IA
+
+//class ShoppingCart {
   /*
   constructor() {
     // Espera o Snipcart ficar pronto
@@ -8,7 +40,7 @@ class ShoppingCart {
       this.syncWithSnipcart(); // Só executa quando a API estiver disponível
     });
   }
-    */
+    
   constructor() {
     // Apenas monitora o carrinho, não tenta gerenciá-lo
     document.addEventListener('snipcart.ready', () => {
@@ -26,7 +58,7 @@ class ShoppingCart {
       }
     });
   }
-  
+
   async setupSnipcart() {
     try {
 
@@ -77,8 +109,10 @@ class ShoppingCart {
     ]);
   }
   
+  */
+
   // Método MODIFICADO - Adiciona sincronização com Snipcart
-  addItem(product) {
+  /*addItem(product) {
     const existingItem = this.cartItems.find(item => item.id === product.id);
     
     if (existingItem) {
@@ -93,27 +127,33 @@ class ShoppingCart {
     this.updateCartUI();
     this.syncWithSnipcart(); // ← Novo método de sincronização
   }
-  
+  */
   
   // Método NOVO - Sincroniza com Snipcart
-  syncWithSnipcart() {
+/*  syncWithSnipcart() {
     if (!window.Snipcart) return;
     
     document.addEventListener('snipcart.ready', () => {
-      const items = Snipcart.api.cart.items;
-      // Limpa o carrinho do Snipcart
-      Snipcart.api.cart.items().forEach(item => {
-        Snipcart.api.cart.items.remove(item.id);
-      });
       
-      // Adiciona todos os itens atuais
-      this.cartItems.forEach(item => {
-        Snipcart.api.cart.items.add({
-          id: item.id,
-          name: item.name,
-          price: item.price,
-          quantity: item.quantity,
-          url: window.location.href
+      //garante que a api é chamada depois de carregada
+      Snipcart.events.on('cart.ready', () => {
+        const items = Snipcart.api.cart.items;
+      
+
+        // Limpa o carrinho do Snipcart
+        Snipcart.api.cart.items().forEach(item => {
+          Snipcart.api.cart.items.remove(item.id);
+        });
+      
+        // Adiciona todos os itens atuais
+        this.cartItems.forEach(item => {
+          Snipcart.api.cart.items.add({
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            quantity: item.quantity,
+            url: window.location.href
+          });
         });
       });
     });
@@ -249,8 +289,8 @@ class ShoppingCart {
   }
 }
 
-
  // ✅ Correção (inicialização imediata + verificação)
 document.addEventListener('DOMContentLoaded', () => {
   window.cart = new ShoppingCart();
 });
+*/

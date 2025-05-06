@@ -179,10 +179,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
-
+/*
 // No final do seu script.js
 if (typeof Parse !== 'undefined') {
     document.dispatchEvent(new Event('parseReady'));
   } else {
     console.warn('Parse.js não foi carregado corretamente');
   }
+
+  document.addEventListener('snipcart.ready', () => {
+    console.log('Snipcart pronto! Estado inicial:', {
+      items: Snipcart.store.getState().cart.items,
+      modal: Snipcart.store.getState().modal.status
+    });
+  });*/

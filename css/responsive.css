@@ -1,0 +1,24 @@
+/* === Responsividade === */
+@media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .hero-content h1 {
+      font-size: 32px;
+    }
+  
+    .hero-content p {
+      font-size: 18px;
+    }
+  
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .cart {
+      width: 100%;
+    }
+  }
+  
