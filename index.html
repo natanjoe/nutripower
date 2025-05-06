@@ -1,97 +1,166 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Favicon básico -->
-    <link rel="icon" href="/image/favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="/image/apple-touch-icon.png">
+    <link rel="icon" href="/image/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/image/apple-touch-icon.png" />
 
     <title>Nutrição Esportiva - Performance e Saúde</title>
+    <script src="https://www.parsecdn.com/js/parse-latest.js"></script>
+    
+    <!-- CSS do Snipcart -->
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css" />
+    
+    <!-- Seu CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
 
-    
-</head>
-
-<body>
-    <div class="language-selector">
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo" data-text="header.logo"></div>
+         
+          <button class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-items">0</span>
+          </button>
+         
+          <button class="mobile-menu-btn">☰</button>
+         
+          <ul class="menu">
+            <li><a href="#produtos" data-text="header.menu.produtos"></a></li>
+            <li>
+              <a href="#produtos" data-text="header.menu.wheyprotein"></a>
+            </li>
+            <li><a href="#produtos" data-text="header.menu.pretreino"></a></li>
+            <li><a href="#produtos" data-text="header.menu.creatina"></a></li>
+            <li><a href="#produtos" data-text="header.menu.omega"></a></li>
+            <li><a href="#produtos" data-text="header.menu.bcaa"></a></li>
+            <li><a href="#produtos" data-text="header.menu.glutamina"></a></li>
+            <li><a href="#promocoes" data-text="header.menu.promocoes"></a></li>
+            <li>
+              <a href="#quem-somos" data-text="header.menu.quemSomos"></a>
+            </li>
+            <li><a href="#contato" data-text="header.menu.contato"></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="language-selector">
         <button class="lang-btn active" data-lang="pt">🇧🇷 PT</button>
         <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
-    </div>
-    
-    <header>
-          <div class="container">
-            <nav>
-                <div class="logo" data-text="header.logo">NutriPower</div>
-                <button class="mobile-menu-btn">☰</button>
-                <ul class="menu">
-                    <li><a href="#produtos" data-text="header.menu.produtos"></a></li>
-                    <li><a href="#promocoes" data-text="header.menu.promocoes"></a></li>
-                    <li><a href="#quem-somos" data-text="header.menu.quemSomos"></a></li>
-                    <li><a href="#contato" data-text="header.menu.contato"></a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <section class="hero">
-        <div class="hero-content">
-            <h1 data-text="hero.titulo"></h1>
-            <p data-text="hero.subtitulo"></p>
-            <a href="#produtos" class="btn" data-text="hero.botao"></a>
-        </div>
-    </section>
-    
-    <section id="produtos">
-        <div class="container">
-            <h2 class="section-title" data-text="secoes.produtos"></h2>
-        </div>
-    </section>
-    
-    <section id="promocoes" class="bg-light">
-        <div class="container">
-            <h2 class="section-title" data-text="secoes.promocoes"></h2>
-        </div>
-    </section>
-    
-    <section id="quem-somos">
-        <div class="container">
-            <h2 class="section-title" data-text="secoes.quemSomos"></h2>
-        </div>
-    </section>
-    
-    <section id="contato" class="bg-light">
-        <div class="container">
-            <h2 class="section-title" data-text="secoes.contato"></h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fab fa-instagram"></i>
-                    <a href="#" class="contact-link" data-text="contato.instagram" target="_blank"></a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-facebook-f"></i>
-                    <a href="#" class="contact-link" data-text="contato.facebook" target="_blank"></a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="#" class="contact-link" data-text="contato.email"></a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <a href="#" class="contact-link" data-text="contato.whatsapp" target="_blank"></a>
-                </div>
+      </div>
+
+      <!-- Adicione esta estrutura do carrinho -->
+      <div class="cart-overlay">
+        <div class="cart">
+          <div class="cart-header">
+            <h3 class="cart-title">Seu Carrinho</h3>
+            <button class="close-cart">&times;</button>
+          </div>
+          <div class="cart-content">
+            <!-- Itens do carrinho serão inseridos aqui -->
+          </div>
+          <div class="cart-footer">
+            <div class="cart-total">
+              <span>Total:</span>
+              <span class="total">R$ 0,00</span>
             </div>
+            <button class="snipcart-checkout checkout-btn">Finalizar Compra</button>
+          </div>
         </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 data-text="hero.titulo"></h1>
+        <p data-text="hero.subtitulo"></p>
+        <a href="#produtos" class="btn" data-text="hero.botao"></a>
+      </div>
+    </section>
+
+    <section id="produtos">
+      <div class="container">
+        <h2 class="section-title" data-text="secoes.produtos"></h2>
+        <div id="produtos-container" class="products-grid">
+          <!-- Produtos serão carregados aqui via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section id="promocoes" class="bg-light">
+      <div class="container">
+        <h2 class="section-title" data-text="secoes.promocoes"></h2>
+          <!-- Promoções serão carregados aqui via JavaScript -->
+      </div>
+    </section>
+
+    <section id="quem-somos">
+      <div class="container">
+        <h2 class="section-title" data-text="secoes.quemSomos"></h2>
+      </div>
+    </section>
+
+    <section id="contato" class="bg-light">
+      <div class="container">
+        <h2 class="section-title" data-text="secoes.contato"></h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fab fa-instagram"></i>
+            <a
+              href="#"
+              class="contact-link"
+              data-text="contato.instagram"
+              target="_blank"
+            ></a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-facebook-f"></i>
+            <a
+              href="#"
+              class="contact-link"
+              data-text="contato.facebook"
+              target="_blank"
+            ></a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="#" class="contact-link" data-text="contato.email"></a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <a
+              href="#"
+              class="contact-link"
+              data-text="contato.whatsapp"
+              target="_blank"
+            ></a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p data-text="footer.copyright"></p>
-        </div>
+      <div class="container">
+        <p data-text="footer.copyright"></p>
+      </div>
     </footer>
-    
+
+    <div hidden id="snipcart"
+      data-api-key="NDRjMjBhNTQtYTQ5MC00ZTg5LWFlZDctN2RjYzYyOTk5MmI1NjM4ODE4MTc5NzQwMzU0NTQ2"
+      data-config-modal-style="side">
+    </div>   
+
     <script src="js/script.js"></script>
-</body>
+    <script src="js/products.js"></script>
+    <script src="/js/cart.js"></script>
+
+    <script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script>
+
+  </body>
 </html>

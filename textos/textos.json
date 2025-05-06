@@ -8,6 +8,12 @@
             "logo": "NutriPower",
             "menu": {
                 "produtos": "Produtos",
+                "wheyprotein":"Whey Protein",
+                "pretreino":"Pré Treino",
+                "creatina":"Creatina",
+                "omega 3":"Ômega 3",
+                "bcaa":"BCAA",
+                "glutamina":"Glutamina",
                 "promocoes": "Promoções",
                 "quemSomos": "Quem Somos",
                 "contato": "Contato"
@@ -31,7 +37,7 @@
                 "whatsapp": "(85)9823-67462"
             },
         "footer": {
-            "copyright": "© NutriPower - Todos os direitos reservados"
+            "copyright": "© NutriPower Produtos - Todos os direitos reservados"
         }
     },
     "en": {
@@ -66,7 +72,7 @@
                 "whatsapp": "(85)9823-67462"
             },
         "footer": {
-            "copyright": "© NutriPower - All rights reserved"
+            "copyright": "© NutriPower Products - All rights reserved"
         }
     }
 }

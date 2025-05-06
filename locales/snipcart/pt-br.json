@@ -1,0 +1,38 @@
+{
+    "cart": {
+      "empty": "Seu carrinho está vazio",
+      "total": "Total",
+      "subtotal": "Subtotal",
+      "shipping": "Frete",
+      "total_discounts": "Descontos",
+      "taxes": "Impostos",
+      "continue_shopping": "Continuar comprando",
+      "checkout": "Finalizar compra",
+      "quantity": "Quantidade",
+      "remove": "Remover"
+    },
+    "checkout": {
+      "first_name": "Nome",
+      "last_name": "Sobrenome",
+      "email": "E-mail",
+      "address1": "Endereço",
+      "address2": "Complemento",
+      "city": "Cidade",
+      "postal_code": "CEP",
+      "country": "País",
+      "phone": "Telefone",
+      "company": "Empresa",
+      "save_info": "Salvar informações"
+    },
+    "payment": {
+      "card_number": "Número do cartão",
+      "expiry_date": "Validade",
+      "cvc": "Código de segurança",
+      "name_on_card": "Nome no cartão"
+    },
+    "errors": {
+      "required": "Este campo é obrigatório",
+      "email": "E-mail inválido",
+      "postal_code": "CEP inválido"
+    }
+  }

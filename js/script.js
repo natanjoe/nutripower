@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const menu = document.querySelector('.menu');
         menuBtn?.addEventListener('click', () => menu?.classList.toggle('active'));
+        
     }
 
     function initSmoothScroll() {
@@ -178,3 +179,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+// No final do seu script.js
+if (typeof Parse !== 'undefined') {
+    document.dispatchEvent(new Event('parseReady'));
+  } else {
+    console.warn('Parse.js não foi carregado corretamente');
+  }

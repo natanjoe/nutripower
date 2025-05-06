@@ -1,0 +1,43 @@
+{
+  "produtos": [
+    {
+      "id": "whey-1kg",
+      "nome": "Whey Protein 1kg",
+      "descricao": "Proteína isolada de alta qualidade",
+      "preco": 99.90,
+      "imagem": "images/whey.jpg",
+      "categoria": "proteina",
+      "url":"/produto"
+      
+    },
+    {
+      "id": "creatina-300g",
+      "nome": "Creatina 300g",
+      "descricao": "Creatina monohidratada pura",
+      "preco": 59.90,
+      "imagem": "images/creatina.jpg",
+      "categoria": "performance",
+      "url":"/produto"
+    },
+    {
+      "id": "pretreino",
+      "nome": "Pré-Treino 150mg",
+      "descricao": "Pré treino Horus Max Titanium - Maçã Verde",
+      "preco": 75.91,
+      "imagem": "/images/pre-treino.jpg",
+      "categoria": "performance",
+      "url":"/produto"
+    }
+  ],
+  "promocoes":[
+    {
+      "id": "creatina-pretreino-coqueteleira",
+      "nome": "Combo Imperdível",
+      "descricao": "Creatina da Max Titanium + Pré-treino Hórus + Coqueteleira Max",
+      "preco": 170.00,
+      "imagem": "images/combo1.png",
+      "categoria": "proteina"
+    }
+  ]
+  
+}
