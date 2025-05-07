@@ -73,12 +73,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Menu mobile
-    function initMobileMenu() {
+    /*function initMobileMenu() {
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const menu = document.querySelector('.menu');
         menuBtn?.addEventListener('click', () => menu?.classList.toggle('active'));
         
-    }
+    }*/
+
+        function initMobileMenu() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const menu = document.querySelector('.menu');
+            
+            menuBtn?.addEventListener('click', (e) => {
+                e.stopPropagation(); // Impede que o evento se propague
+                menu?.classList.toggle('active');
+            });
+            
+            // Fecha o menu ao clicar em qualquer lugar fora
+            document.addEventListener('click', (e) => {
+                if (!menu?.contains(e.target) && e.target !== menuBtn) {
+                    menu?.classList.remove('active');
+                }
+            });
+            
+            // Controle dos submenus no mobile
+            document.querySelectorAll('.menu > li').forEach(item => {
+                const submenu = item.querySelector('.submenu');
+                if (submenu) {
+                    const link = item.querySelector('a');
+                    
+                    link?.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            item.classList.toggle('active');
+                            
+                            // Fecha outros submenus abertos
+                            document.querySelectorAll('.menu > li').forEach(otherItem => {
+                                if (otherItem !== item && otherItem.querySelector('.submenu')) {
+                                    otherItem.classList.remove('active');
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+        }
+
+
 
     function initSmoothScroll() {
         // Modifique o seletor para pegar APENAS links internos

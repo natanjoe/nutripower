@@ -4,28 +4,28 @@
       "id": "whey-1kg",
       "nome": "Whey Protein 1kg",
       "descricao": "Proteína isolada de alta qualidade",
-      "preco": 99.90,
-      "imagem": "https://a280-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/images/whey.jpg",
+      "preco": 99,
+      "imagem": "/images/whey.jpg",
       "categoria": "proteina",
-      "url": "https://a280-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/produtos/whey.html"
+      "url": "/produtos/whey.html"
     },
     {
       "id": "creatina-300g",
       "nome": "Creatina 300g",
       "descricao": "Creatina monohidratada pura",
       "preco": 59.90,
-      "imagem": "https://a280-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/images/creatina.jpg",
+      "imagem": "/images/Creatina.png",
       "categoria": "performance",
-      "url": "https://a280-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/produtos/creatina.html"
+      "url": "/produtos/creatina.html"
     },
     {
       "id": "pretreino",
       "nome": "Pré-Treino 150mg",
       "descricao": "Pré treino Horus Max Titanium - Maçã Verde",
       "preco": 75.91,
-      "imagem": "https://a280-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/images/pre-treino.jpg",
+      "imagem": "/images/pre-treino.jpg",
       "categoria": "performance",
-      "url": "https://a280-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/produtos/pretreino.html"
+      "url": "/produtos/pretreino.html"
     }
   ],
   "promocoes":[

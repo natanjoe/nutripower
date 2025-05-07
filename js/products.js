@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   } catch (error) {
     console.error('Erro:', error);
+    console.warn('Carregando produtos de fallback. Verifique o arquivo /data/produtos.json');
+
     // Fallback - Pode carregar produtos estáticos se o JSON falhar
     const fallbackProducts = [
       {
@@ -41,14 +43,11 @@ function renderProducts(products) {
         data-item-price="${product.preco}"
         data-item-name="${product.nome}"
         data-item-description="${product.descricao || 'Sem descrição'}"
-        data-item-url="${product.url}" 
-        data-item-image="${product.imagem.startsWith('http') ? product.imagem : 'https://b9d2-2804-xxxx.ngrok-free.app/' + product.imagem}"
+        data-item-url="${window.location.origin}${product.url || '/produtos'}" 
+        data-item-image="${product.imagem.startsWith('http') ? product.imagem : `${window.location.origin}/${product.imagem}`}"
         style="cursor:pointer">
         Adicionar ao Carrinho
       </button>
     </div>
   `).join('');
 }
-
-
-//data-item-url="/produtos/${product.id}"
