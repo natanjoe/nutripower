@@ -50,27 +50,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Atualiza links de contato
-    function updateLinkHref(element, keys, value) {
-        if (element.tagName === 'A' && keys.includes('contato')) {
-            const type = keys[keys.length - 1];
-            const linkMap = {
-                instagram: `https://instagram.com/${value.replace('@', '')}`,
-                facebook: `https://facebook.com/${value.replace('@', '')}`,
-                email: `mailto:${value}`,
-                whatsapp: `https://wa.me/55${value.replace(/\D/g, '')}`
-            };
-            if (linkMap[type]){
-                element.href = linkMap[type];
+   // Atualiza links de contato
+function updateLinkHref(element, keys, value) {
+    if (element.tagName === 'A' && keys.includes('contato')) {
+        const type = keys[keys.length - 1];
 
-                 // Adiciona target="_blank" para redes sociais
-                if (type === 'instagram' || type === 'facebook' || type === 'whatsapp') {
-                    element.setAttribute('target', '_blank');
-                    element.setAttribute('rel', 'noopener noreferrer');
-                }
-            } 
+        // Detecta se o dispositivo é mobile
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        // Cria o objeto de links com base no tipo
+        const linkMap = {
+            instagram: `https://instagram.com/${value.replace('@', '')}`,
+            facebook: `https://facebook.com/${value.replace('@', '')}`,
+            email: `mailto:${value}`,
+            whatsapp: isMobile
+                ? `https://wa.me/55${value.replace(/\D/g, '')}?text=Olá%2C%20quero%20mais%20informações!`
+                : `https://web.whatsapp.com/send?phone=55${value.replace(/\D/g, '')}&text=Olá%2C%20quero%20mais%20informações!`
+        };
+
+        if (linkMap[type]) {
+            element.href = linkMap[type];
+
+            // Adiciona target="_blank" para abrir em nova aba com segurança
+            if (['instagram', 'facebook', 'whatsapp'].includes(type)) {
+                element.setAttribute('target', '_blank');
+                element.setAttribute('rel', 'noopener noreferrer');
+            }
         }
     }
+}
+
 
     // Menu mobile
     /*function initMobileMenu() {
