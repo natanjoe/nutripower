@@ -19,12 +19,20 @@
     /* Cores específicas */
     --cor-fundo-claro: #ecf0f1;
 }
+/*
 .site-wrapper * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+}*/
+
+.site-wrapper .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 
 body {
     background-color: var(--cor-fundo);
@@ -44,16 +52,18 @@ header {
     justify-content: space-between;
 }
 
-.site-wrapper .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Layout flexível para o header */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
+
+
 .cart-btn {
-    position: relative;
     top: 0px;
-    right: 20px;
     background: var(--cor-secundaria);
     color: var(--cor-branca);
     border: none;
@@ -62,16 +72,17 @@ header {
     height: 50px;
     font-size: 1.2rem;
     cursor: pointer;
-    z-index: 99;
     transition: background 0.3s;
 }
+
 .cart-btn:hover {
     background: var(--cor-terciaria);
 }
 
+
 nav {
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
     padding: 0 2rem;
     max-width: 1200px;
@@ -84,6 +95,7 @@ nav {
     color: var(--cor-secundaria);
     padding: 0.5rem 1rem;
     min-width: 200px;
+    flex: 1;
 }
 
 .menu {
