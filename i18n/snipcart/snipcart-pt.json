@@ -1,0 +1,33 @@
+{
+  "pt": {
+    "cart.summary": "Resumo do Carrinho",
+    "cart.checkout": "Finalizar Compra",
+    "cart.empty": "Seu carrinho está vazio",
+    "cart.subtotal": "Subtotal",
+    "cart.shipping": "Frete",
+    "cart.taxes": "Impostos",
+    "cart.total": "Total",
+    "cart.update": "Atualizar",
+    "billing.same_as_shipping": "Igual ao endereço de entrega",
+    "billing.firstname": "Nome",
+    "billing.lastname": "Sobrenome",
+    "billing.company": "Empresa",
+    "billing.address1": "Endereço",
+    "billing.address2": "Complemento",
+    "billing.city": "Cidade",
+    "billing.postalcode": "CEP",
+    "billing.phone": "Telefone",
+    "billing.email": "E-mail",
+    "billing.province": "Estado",
+    "shipping.firstname": "Nome",
+    "shipping.lastname": "Sobrenome",
+    "shipping.company": "Empresa",
+    "shipping.address1": "Endereço",
+    "shipping.address2": "Complemento",
+    "shipping.city": "Cidade",
+    "shipping.postalcode": "CEP",
+    "shipping.phone": "Telefone",
+    "shipping.email": "E-mail",
+    "shipping.province": "Estado"
+  }
+}
