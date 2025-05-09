@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Configurações
     let currentLanguage = 'pt';
-    const jsonPath = '/textos/textos.json';
+    const jsonPath = '/i18n/site/textos.json';
     
     // Inicializações
     initMobileMenu();
