@@ -40,6 +40,9 @@ function gerarPagina(produto) {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
+<!-- basicLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css" />
+
 
   <style>
     body {
@@ -133,10 +136,12 @@ function gerarPagina(produto) {
        <div class="swiper product-images">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="/${produto.imagem}" alt="${produto.nome}" />
+                <img src="/${produto.imagem}" alt="${produto.nome}" 
+                onclick="openLightbox('/${produto.imagem}')"/>
               </div>
               <div class="swiper-slide">
-               <img src="/${produto.imagemnutri}" alt="${produto.nome}" />
+               <img src="/${produto.imagemnutri}" alt="${produto.nome}" 
+               onclick="openLightbox('/${produto.imagemnutri}')"/>
               </div>
             </div>
 
@@ -187,6 +192,21 @@ function gerarPagina(produto) {
     },
   });
 </script>
+
+<!-- basicLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+
+
+<script>
+  function openLightbox(imgSrc) {
+  const instance = basicLightbox.create(
+    '<img src="' + imgSrc + '" style="max-width: 100%; max-height: 90vh;" />'
+  );
+  instance.show();
+}
+</script>
+
+
 </body>
 </html>
 `;
