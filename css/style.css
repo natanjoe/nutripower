@@ -195,6 +195,12 @@ nav {
     object-fit: cover;
 }
 
+.descricao {
+    font-size: 0.9rem;
+    color: #444;
+    margin: 6px 0;
+  }
+  
 .bg-light {
     background-color: var(--cor-fundo-claro);
 }

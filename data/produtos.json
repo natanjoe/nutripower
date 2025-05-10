@@ -1,31 +1,14 @@
 {
   "produtos": [
     {
-      "id": "whey-1kg",
-      "nome": "Whey Protein 1kg",
-      "descricao": "Proteína isolada de alta qualidade",
-      "preco": 99,
-      "imagem": "/images/whey.jpg",
-      "categoria": "proteina",
-      "url": "/produtos/whey.html"
-    },
-    {
-      "id": "creatina-300g",
-      "nome": "Creatina 300g",
-      "descricao": "Creatina monohidratada pura",
-      "preco": 59.90,
-      "imagem": "/images/Creatina.png",
-      "categoria": "performance",
-      "url": "/produtos/creatina.html"
-    },
-    {
-      "id": "pretreino",
-      "nome": "Pré-Treino 150mg",
-      "descricao": "Pré treino Horus Max Titanium - Maçã Verde",
-      "preco": 75.91,
-      "imagem": "/images/pre-treino.jpg",
-      "categoria": "performance",
-      "url": "/produtos/pretreino.html"
+      "id": "blackskull_creatina_300",
+      "nome": "Creatina 300g - BLACKSKULL",
+      "descricao": "Creatina mono-hidratada pura",
+      "preco": 64.90,
+      "imagem": "images/blackskull_creatina_300.png",
+      "imagemnutri": "images/blackskull_creatina_300-nutri.png",
+      "categoria": "CREATINA",
+      "url": "/produtos/blackskull_creatina_300.html"
     }
   ],
   "promocoes":[
@@ -35,6 +18,7 @@
       "descricao": "Creatina da Max Titanium + Pré-treino Hórus + Coqueteleira Max",
       "preco": 170.00,
       "imagem": "images/combo1.png",
+      "imagemnutri": "images/blackskull_creatina_300-nutri.png",
       "categoria": "proteina",
       "url": "/produtos/produto.html?id=combo"
     }

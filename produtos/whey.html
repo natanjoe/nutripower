@@ -3,55 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
-  <!-- Favicon básico -->
-   <link rel="icon" href="/image/favicon.ico" sizes="any" />
-   <link rel="icon" href="/image/favicon.ico" type="image/x-icon">
-   <link rel="apple-touch-icon" href="/image/apple-touch-icon.png" />
 
-  <title>Whey Protein 1kg | Sua Loja</title>
-  <meta name="description" content="Proteína isolada de alta qualidade - Whey Protein 1kg" />
+  <title>Creatina BlackSkull 300g | Sua Loja</title>
+  <meta name="description" content="Creatina BlackSkull - é composto 100% por creatina monoidratada"" />
 
-  <meta property="og:produtosnutripower.com" content="produtosnutripower" />
-  <meta name="twitter:card" content="summary_large_image">
-
-  <meta property="og:title" content="Whey Protein 1kg" />
-  <meta property="og:description" content="Proteína isolada de alta qualidade" />
-  <meta property="og:image" content="https://fef7-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/images/whey.jpg" />
-  <meta property="og:url" content="https://fef7-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/produtos/whey.html" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Creatina blackskull 300g" />
+  <meta property="og:description" content="Creatina BlackSkull - é composto 100% por creatina monoidratada"" />
+  <meta property="og:image" content="https://3728-2804-7fa8-9081-e600-2347-3f74-6472-a4e7.ngrok-free.app/images/whey.jpg" />
+  <meta property="og:url" content="https://3728-2804-7fa8-9081-e600-2347-3f74-6472-a4e7.ngrok-free.app/produtos/whey.html" />
   <meta property="og:type" content="product" />
   <meta property="product:price:amount" content="99.90" />
   <meta property="product:price:currency" content="BRL" />
 
-  <!-- Snipcart SDK -->
-  <link rel="preconnect" href="https://app.snipcart.com" />
-  <link rel="preconnect" href="https://cdn.snipcart.com" />
-  <script src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js" defer></script>
-  
-
-  <!-- Snipcart API Key -->
+  <!-- Snipcart -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css" />
+  <script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script>
   <div hidden id="snipcart" data-api-key="NDRjMjBhNTQtYTQ5MC00ZTg5LWFlZDctN2RjYzYyOTk5MmI1NjM4ODE4MTc5NzQwMzU0NTQ2"></div>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .product-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .product-images {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .product-images img {
+      width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    .product-details {
+      flex: 2;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      color: #28a745;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+    .snipcart-add-item {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .snipcart-add-item:hover {
+      background-color: #218838;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #007bff;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <main>
-    <h1>Whey Protein 1kg</h1>
-    <img src="https://fef7-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/images/whey.jpg" 
-    alt="Whey Protein 1kg - embalagem preta com detalhes em azul" width="300" />
-    <p>Proteína isolada de alta qualidade</p>
-    <p><strong>R$ 99,90</strong></p>
+  <div class="container">
+    <a href="/index.html" class="back-link">← Voltar para a loja</a>
 
-    <button 
-      class="snipcart-add-item"
-      data-item-id="whey-1kg"
-      data-item-name="Whey Protein 1kg"
-      data-item-price="99.90"
-      data-item-url="https://fef7-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/produtos/whey.html"
-      data-item-description="Proteína isolada de alta qualidade"
-      data-item-image="https://fef7-2804-7fa8-9081-e600-706-8e20-876-b1f4.ngrok-free.app/images/whey.jpg"
-    >
-      Comprar
-    </button>
-  </main>
+    <div class="product-header">
+      <div class="product-images">
+        <img src="/images/blackskull_creatina_300.png" alt="Imagem principal do produto">
+        <img src="/images/blackskull_creatina_300-nutri.png" alt="Nutrientes">        
+      </div>
+
+      <div class="product-details">
+        <h1>Creatina 300g</h1>
+        <p>1) A creatina é um composto produzido pelos rins,fígado e pâncreas e é armazenada, 
+          em sua maior parte, nas fibras musculares. Ela também pode ser encontrada em carnes e peixes. 
+          A cada 1kg de carne vermelha, encontra-se 5g de creatina. O papel primário da creatina nos músculos 
+          é fornecer energia para as células musculares durante exercícios de resistência e sprint de alta intensidade . 
+          <br>2) A creatina monohidratada é um dos ativos mais estudados pela ciência nos últimos anos. 
+          Além dos benefícios conhecidos para o esporte, seu consumo apresentou efeitos anti-inflamatórios 
+          melhorando a saúde de forma geral e a melhoria da performance cerebral por atuar como neuroprotetora, 
+          diminuindo a demanda cerebral por oxigênio.<br>
+          A CREATINE™ da BLACKSKULL USA™ é um produto composto 100% por creatina monoidratada que irá fornecer 
+          mais energia para melhorar o desempenho físico durante exercícios repetidos de curta duração 
+          e alta intensidade, contribuindo para a hipertrofia muscular. 
+          <br>SABOR: SEM SABOR"</p>
+        <p class="price">R$ 64,90</p>
+
+        <button 
+          class="snipcart-add-item"
+          data-item-id="blackskull_creatina_300"
+          data-item-name="Creatina 300g"
+          data-item-price="64,90"
+          data-item-url="https://3728-2804-7fa8-9081-e600-2347-3f74-6472-a4e7.ngrok-free.app/index.html"
+          data-item-description="Creatina BlackSkull - é composto 100% por creatina monoidratada"
+          data-item-image="https://3728-2804-7fa8-9081-e600-2347-3f74-6472-a4e7.ngrok-free.app/images/whey.jpg"
+          data-item-custom1-name="Sabor"
+          data-item-custom1-options="Chocolate|Baunilha|Morango|Cookies"
+        >
+          Comprar
+        </button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

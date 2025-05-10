@@ -1,16 +1,3 @@
-const fs = require("fs");
-const path = require("path");
-
-const dados = require("./produtos.json");
-const outputDir = path.join(__dirname, "../produtos/"); 
-
-// Cria a pasta se não existir
-if (!fs.existsSync(outputDir)) {
-  fs.mkdirSync(outputDir);
-}
-
-function gerarPagina(produto) {
-  const html = `
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,15 +8,15 @@ function gerarPagina(produto) {
     <link rel="icon" href="/image/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/image/apple-touch-icon.png" />
 
-  <title>${produto.nome}</title>
-  <meta name="description" content="${produto.descricao}" />
+  <title>Combo Imperdível</title>
+  <meta name="description" content="Creatina da Max Titanium + Pré-treino Hórus + Coqueteleira Max" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="${produto.nome}" />
-  <meta property="og:description" content="${produto.descricao}" />
-  <meta property="og:image" content="${produto.imagem}" />
+  <meta property="og:title" content="Combo Imperdível" />
+  <meta property="og:description" content="Creatina da Max Titanium + Pré-treino Hórus + Coqueteleira Max" />
+  <meta property="og:image" content="images/combo1.png" />
   <meta property="og:type" content="product" />
-  <meta property="og:url" content="https://3728-2804-7fa8-9081-e600-2347-3f74-6472-a4e7.ngrok-free.app/produtos/${produto.id}.html" />
+  <meta property="og:url" content="https://3728-2804-7fa8-9081-e600-2347-3f74-6472-a4e7.ngrok-free.app/produtos/creatina-pretreino-coqueteleira.html" />
   
   <!-- Snipcart -->
   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.css" />
@@ -110,23 +97,23 @@ function gerarPagina(produto) {
 
       <div class="product-header">
         <div class="product-images">
-          <img src="/${produto.imagem}" alt="${produto.nome}" />
-          <img src="/${produto.imagemnutri}" alt="${produto.nome}" />
+          <img src="/images/combo1.png" alt="Combo Imperdível" />
+          <img src="/images/blackskull_creatina_300-nutri.png" alt="Combo Imperdível" />
         </div>
     
         <div class="product-details">
-          <h1>${produto.nome}</h1>
-          <p>${produto.descricao}</p>
-          <p class="price"><strong>R$ ${produto.preco.toFixed(2)}</strong></p>
+          <h1>Combo Imperdível</h1>
+          <p>Creatina da Max Titanium + Pré-treino Hórus + Coqueteleira Max</p>
+          <p class="price"><strong>R$ 170.00</strong></p>
     
           <button
             class="snipcart-add-item"
-            data-item-id="${produto.id}"
-            data-item-name="${produto.nome}"
-            data-item-price="${produto.preco}"
-            data-item-url="/produtos/${produto.id}.html"
-            data-item-description="${produto.descricao}"
-            data-item-image="/${produto.imagem}"
+            data-item-id="creatina-pretreino-coqueteleira"
+            data-item-name="Combo Imperdível"
+            data-item-price="170"
+            data-item-url="/produtos/creatina-pretreino-coqueteleira.html"
+            data-item-description="Creatina da Max Titanium + Pré-treino Hórus + Coqueteleira Max"
+            data-item-image="/images/combo1.png"
           >
             Adicionar ao carrinho
           </button>
@@ -136,12 +123,3 @@ function gerarPagina(produto) {
   <div hidden id="snipcart" data-api-key="NDRjMjBhNTQtYTQ5MC00ZTg5LWFlZDctN2RjYzYyOTk5MmI1NjM4ODE4MTc5NzQwMzU0NTQ2"></div>
 </body>
 </html>
-`;
-
-  const outputPath = path.join(outputDir, `${produto.id}.html`);
-  fs.writeFileSync(outputPath, html.trim());
-  console.log(`Página gerada: ${outputPath}`);
-}
-
-// Gera páginas para produtos e promoções
-[...dados.produtos, ...dados.promocoes].forEach(gerarPagina);
