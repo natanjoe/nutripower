@@ -36,6 +36,11 @@ function gerarPagina(produto) {
   <script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script>
   
   
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -101,21 +106,52 @@ function gerarPagina(produto) {
     .back-link:hover {
       text-decoration: underline;
     }
+
+    .product-images {
+      width: 100%;
+      max-width: 400px;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+      
+    }
+    /* Altere a cor das setas de navegação do Swiper */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #0d0e0d; /* Verde padrão */
+    }
   </style>
 </head>
 <body>
   
   <div class="produto-container">
-    <a href="/index.html" class="back-link">← Voltar para a loja</a>
+    <a href="/index.html" class="back-link">← Continuar comprando</a>
+
+       <div class="swiper product-images">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/${produto.imagem}" alt="${produto.nome}" />
+              </div>
+              <div class="swiper-slide">
+               <img src="/${produto.imagemnutri}" alt="${produto.nome}" />
+              </div>
+            </div>
+
+            <!-- Botões de navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Paginador -->
+            <div class="swiper-pagination"></div>
+          </div>
 
       <div class="product-header">
-        <div class="product-images">
-          <img src="/${produto.imagem}" alt="${produto.nome}" />
-          <img src="/${produto.imagemnutri}" alt="${produto.nome}" />
-        </div>
-    
+         
         <div class="product-details">
-          <h1>${produto.nome}</h1>
+          <h2>${produto.nome}</h2>
           <p>${produto.descricao}</p>
           <p class="price"><strong>R$ ${produto.preco.toFixed(2)}</strong></p>
     
@@ -134,6 +170,23 @@ function gerarPagina(produto) {
       </div>
   </div>
   <div hidden id="snipcart" data-api-key="NDRjMjBhNTQtYTQ5MC00ZTg5LWFlZDctN2RjYzYyOTk5MmI1NjM4ODE4MTc5NzQwMzU0NTQ2"></div>
+
+   <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    spaceBetween: 10,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
 </body>
 </html>
 `;

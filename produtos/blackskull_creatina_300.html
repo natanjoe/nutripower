@@ -23,6 +23,11 @@
   <script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script>
   
   
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -88,6 +93,23 @@
     .back-link:hover {
       text-decoration: underline;
     }
+
+    .product-images {
+      width: 100%;
+      max-width: 400px;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+      
+    }
+    /* Altere a cor das setas de navegação do Swiper */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #0d0e0d; /* Verde padrão */
+    }
   </style>
 </head>
 <body>
@@ -95,14 +117,28 @@
   <div class="produto-container">
     <a href="/index.html" class="back-link">← Voltar para a loja</a>
 
+       <div class="swiper product-images">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/images/blackskull_creatina_300.png" alt="Creatina 300g - BLACKSKULL" />
+              </div>
+              <div class="swiper-slide">
+               <img src="/images/blackskull_creatina_300-nutri.png" alt="Creatina 300g - BLACKSKULL" />
+              </div>
+            </div>
+
+            <!-- Botões de navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Paginador -->
+            <div class="swiper-pagination"></div>
+          </div>
+
       <div class="product-header">
-        <div class="product-images">
-          <img src="/images/blackskull_creatina_300.png" alt="Creatina 300g - BLACKSKULL" />
-          <img src="/images/blackskull_creatina_300-nutri.png" alt="Creatina 300g - BLACKSKULL" />
-        </div>
-    
+         
         <div class="product-details">
-          <h1>Creatina 300g - BLACKSKULL</h1>
+          <h2>Creatina 300g - BLACKSKULL</h2>
           <p>Creatina mono-hidratada pura</p>
           <p class="price"><strong>R$ 64.90</strong></p>
     
@@ -121,5 +157,22 @@
       </div>
   </div>
   <div hidden id="snipcart" data-api-key="NDRjMjBhNTQtYTQ5MC00ZTg5LWFlZDctN2RjYzYyOTk5MmI1NjM4ODE4MTc5NzQwMzU0NTQ2"></div>
+
+   <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    spaceBetween: 10,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
 </body>
 </html>
