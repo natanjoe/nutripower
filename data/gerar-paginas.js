@@ -136,12 +136,12 @@ function gerarPagina(produto) {
        <div class="swiper product-images">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="/${produto.imagem}" alt="${produto.nome}" 
-                onclick="openLightbox('/${produto.imagem}')"/>
+                <img src="${produto.imagem}" alt="${produto.nome}" 
+                onclick="openLightbox('${produto.imagem}')"/>
               </div>
               <div class="swiper-slide">
-               <img src="/${produto.imagemnutri}" alt="${produto.nome}" 
-               onclick="openLightbox('/${produto.imagemnutri}')"/>
+               <img src="${produto.imagemnutri}" alt="${produto.nome}" 
+               onclick="openLightbox('${produto.imagemnutri}')"/>
               </div>
             </div>
 
@@ -167,7 +167,7 @@ function gerarPagina(produto) {
             data-item-price="${produto.preco}"
             data-item-url="/produtos/${produto.id}.html"
             data-item-description="${produto.descricao}"
-            data-item-image="/${produto.imagem}"
+            data-item-image="${produto.imagem}"
           >
             Adicionar ao carrinho
           </button>

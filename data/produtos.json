@@ -5,8 +5,8 @@
       "nome": "Creatina 300g - BLACKSKULL",
       "descricao": "Suplemento puro de creatina monohidratada, ideal para aumento de força, explosão muscular e melhor desempenho nos treinos. Auxilia na recuperação e no ganho de massa magra. Sem adição de sabor ou corantes, oferece alta concentração e rápida absorção. Recomendado para atletas que buscam performance e resultados visíveis.",
       "preco": 64.90,
-      "imagem": "images/blackskull_creatina_300.png",
-      "imagemnutri": "images/blackskull_creatina_300-nutri.png",
+      "imagem": "/images/blackskull_creatina_300.png",
+      "imagemnutri": "/images/blackskull_creatina_300-nutri.png",
       "categoria": "CREATINA",
       "url": "/produtos/blackskull_creatina_300.html"
     },
@@ -15,10 +15,20 @@
       "nome": "Whey 100 HD 3W 900g - BLACKSKULL",
       "descricao": "Suplemento de alta qualidade com blend de três tipos de whey protein: concentrado, isolado e hidrolisado. Ideal para recuperação muscular, ganho de massa magra e fortalecimento corporal. Rápida absorção, alto teor de aminoácidos essenciais e sabor excelente. Indicado para atletas e praticantes de atividade física que buscam desempenho e resultado.",
       "preco": 129.00,
-      "imagem": "images/blackskull_whey_100hd-900-pistache.png",
-      "imagemnutri": "images/blackskull_whey_100HD-Refil-900g-nutri.png",
+      "imagem": "/images/blackskull_whey_100hd-900.png",
+      "imagemnutri": "/images/blackskull_whey_100HD-900g-nutri.png",
       "categoria": "PROTEINA",
       "url": "/produtos/blackskull_whey_900.html"
+    },
+    {
+      "id": "blackskull_whey_900_refil",
+      "nome": "Whey 100 HD 3W 900g REFIL - BLACKSKULL",
+      "descricao": "Suplemento de alta qualidade com blend de três tipos de whey protein: concentrado, isolado e hidrolisado. Ideal para recuperação muscular, ganho de massa magra e fortalecimento corporal. Rápida absorção, alto teor de aminoácidos essenciais e sabor excelente. Indicado para atletas e praticantes de atividade física que buscam desempenho e resultado.",
+      "preco": 119.00,
+      "imagem": "/images/blackskull_whey_100hd-900-refil.png",
+      "imagemnutri": "/images/blackskull_whey_100HD-900g-nutri.png",
+      "categoria": "PROTEINA",
+      "url": "/produtos/blackskull_whey_900_refil.html"
     }
   ],
   "promocoes":[
