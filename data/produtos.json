@@ -39,7 +39,21 @@
       "imagemnutri": "/images/blackskull_whey_100HD-900g-nutri.png",
       "categoria": "PROTEINA",
       "url": "/produtos/integralmedica_whey_900.html"
+    },
+    {
+      "id": "integralmedica_creatina_hardcore_300g",
+      "nome": "Creatina 100% Pura 300g Hardcore - Integral Médica",
+      "descricao": "Potencialize sua força e desempenho com a Creatina Hardcore Integralmédica! Uma fórmula pura e eficaz, desenvolvida para aumentar a performance nos treinos de alta intensidade e auxiliar no ganho de massa muscular. Cada dose fornece creatina monohidratada de alta qualidade, promovendo mais explosão, resistência e recuperação muscular.\n\nBenefícios:\n\n- 100% Creatina Monohidratada pura\n- Aumenta a força e resistência física\n- Favorece o ganho de massa muscular\n- Melhora o desempenho em treinos intensos\n- Sem adição de açúcares, corantes ou conservantes\n\nPeso: 300g\nIndicado para: atletas e praticantes de atividades físicas que buscam mais resultados\n\nA escolha ideal para quem quer treinar com mais intensidade e conquistar resultados de verdade!",
+      "preco": 99.00,
+      "imagem": "/images/integralmedica_creatina_hardcore300g.png",
+      "imagemnutri": "/images/integralmedica_creatina_hardcore300g_nutri.png",
+      "imagem1": "/images/integralmedica_creatina_hardcore300g_1.png",
+      "imagem2": "/images/integralmedica_creatina_hardcore300g_2.png",
+      "imagem3": "/images/integralmedica_creatina_hardcore300g_3.png",
+      "categoria": "PROTEINA",
+      "url": "/produtos/integralmedica_creatina_hardcore_300g.html"
     }
+
   ],
   "promocoes":[
     {
