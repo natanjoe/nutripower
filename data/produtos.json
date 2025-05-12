@@ -29,6 +29,16 @@
       "imagemnutri": "/images/blackskull_whey_100HD-900g-nutri.png",
       "categoria": "PROTEINA",
       "url": "/produtos/blackskull_whey_900_refil.html"
+    },
+     {
+      "id": "integralmedica_whey_900",
+      "nome": "Whey Protein 100% concentrado 900g - Integral Médica",
+      "descricao": "A Integral Médica fabrica esse suplemento proteico de alta qualidade, elaborado com whey protein concentrado (WPC), ideal para promover ganho de massa muscular, recuperação pós-treino e manutenção da saúde. Rico em aminoácidos essenciais, com excelente digestibilidade e sabor agradável. Perfeito para quem busca desempenho e resultados consistentes.",
+      "preco": 149.00,
+      "imagem": "/images/integralmedica_whey_100_900g.png",
+      "imagemnutri": "/images/blackskull_whey_100HD-900g-nutri.png",
+      "categoria": "PROTEINA",
+      "url": "/produtos/integralmedica_whey_900.html"
     }
   ],
   "promocoes":[

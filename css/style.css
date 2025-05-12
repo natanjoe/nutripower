@@ -329,6 +329,33 @@ section.visible {
     font-size: 1.2em;
 }
 
+.section-about {
+  background-color: #f8f9fb;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: #222;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  line-height: 1.7;
+}
+
+.section-about h2 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-about p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
 /* Responsivo */
 @media (max-width: 480px) {
     .contact-item {
@@ -388,3 +415,4 @@ section.visible {
         display: none;
     }
 }
+
