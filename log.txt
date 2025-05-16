@@ -1,0 +1,9 @@
+Array
+(
+    [shippingAddress] => Array
+        (
+            [postalCode] => 01001-000
+        )
+
+)
+Erro ao obter fretes:

@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 
+
   </head>
 
   <body>
@@ -143,14 +144,23 @@
     </div>
     <!-- final do wrapper-->
     
-    <!-- No final do body, antes do fechamento -->
+   <!-- No FINAL do <body>, ANTES do fechamento -->
+    <script>
+      window.SnipcartSettings = {
+        publicApiKey: "NDRjMjBhNTQtYTQ5MC00ZTg5LWFlZDctN2RjYzYyOTk5MmI1NjM4ODE4MTc5NzQwMzU0NTQ2",
+        shipping: {
+          enabled: true,
+          customShippingPrices: true // ✅ Ativa o webhook
+        }
+      };
+    </script>
+
     <div hidden
-      id="snipcart" 
-      data-api-key="NDRjMjBhNTQtYTQ5MC00ZTg5LWFlZDctN2RjYzYyOTk5MmI1NjM4ODE4MTc5NzQwMzU0NTQ2"       
+      id="snipcart"
       data-config-modal-style="side"
       data-currency="BRL">
     </div>
-    
+
     <script src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js" defer></script>
   </body>
 </html>
