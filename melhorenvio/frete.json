@@ -1,49 +1,20 @@
-
 {
-  "rates": [
-    {
-      "name": "Frete Padrão",
-      "cost": 20.00,
-      "description": "Frete Padrão - correios PAC ",
-      "id": "standard",
-      "userDefinedId": "correios_pac",
-      "guaranteedDaysToDelivery": 7,
-      "provider": "Correios",
-      "iconUrl": "/image/correios.png"
-    },
-    {
-      "name": "Frete Expresso",
-      "cost": 40.00,
-      "description": "Frete Expresso - correios SEDEX",
-      "id": "express",
-       "provider": "Correios",
-      "guaranteedDaysToDelivery": 3,
-      "iconUrl": "/image/correios.png"
-    },
-    
-    {
-      "name": "jadLog",
-      "cost": 20.00,
-      "description": "frete privado padrão - jadLog",
-      "id": "standard",
-      "guaranteedDaysToDelivery": 7,
-       "iconUrl": "/image/correios.png"
-    },
-    {
-      "name": "Frete Expresso",
-      "cost": 40.00,
-      "description": "Expresso - frete privado jadLog",
-      "id": "express",
-      "guaranteedDaysToDelivery": 3,
-      "iconUrl": "/image/correios.png"
-    },
-     {
-      "name": "Retirada na loja",
-      "cost": 0.00,
-      "description": "recebimento no balcão",
-      "id": "nutripower",
-       "provider": "nutripower",
-      "guaranteedDaysToDelivery": 1,
-      "iconUrl": "/image/correios.png"
-    }
-]}
+    "rates": [
+        {
+            "cost": 35.59,
+            "description": "Envio normal",
+            "guaranteed_days_to_delivery": 8,
+            "id": 3,
+            "iconUrl": "https:\/\/sandbox.melhorenvio.com.br\/images\/shipping-companies\/jadlog.png",
+            "name": "Jadlog"
+        },
+        {
+            "cost": 44.36,
+            "description": "Envio expresso",
+            "guaranteed_days_to_delivery": 7,
+            "id": 4,
+            "iconUrl": "https:\/\/sandbox.melhorenvio.com.br\/images\/shipping-companies\/jadlog.png",
+            "name": "Jadlog"
+        }
+    ]
+}

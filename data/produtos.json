@@ -3,47 +3,71 @@
     {
       "id": "blackskull_creatina_300",
       "nome": "Creatina 300g - BLACKSKULL",
-      "descricao": "Suplemento puro de creatina monohidratada, ideal para aumento de força, explosão muscular e melhor desempenho nos treinos. Auxilia na recuperação e no ganho de massa magra. Sem adição de sabor ou corantes, oferece alta concentração e rápida absorção. Recomendado para atletas que buscam performance e resultados visíveis.",
+      "descricao": "Suplemento puro de creatina monohidratada...",
       "preco": 64.90,
       "imagem": "/images/blackskull_creatina_300.png",
       "imagemnutri": "/images/blackskull_creatina_300-nutri.png",
       "categoria": "CREATINA",
-      "url": "/produtos/blackskull_creatina_300.html"
+      "url": "/produtos/blackskull_creatina_300.html",
+      "peso": 350,
+      "altura": 15,
+      "largura": 10,
+      "comprimento": 5,
+      "ncm": "2106.90.90",
+      "valor_declarado": 64.90
     },
     {
       "id": "blackskull_whey_900",
       "nome": "Whey 100 HD 3W 900g - BLACKSKULL",
-      "descricao": "Suplemento de alta qualidade com blend de três tipos de whey protein: concentrado, isolado e hidrolisado. Ideal para recuperação muscular, ganho de massa magra e fortalecimento corporal. Rápida absorção, alto teor de aminoácidos essenciais e sabor excelente. Indicado para atletas e praticantes de atividade física que buscam desempenho e resultado.",
+      "descricao": "Suplemento de alta qualidade com blend...",
       "preco": 129.00,
       "imagem": "/images/blackskull_whey_100hd-900.png",
       "imagemnutri": "/images/blackskull_whey_100HD-900g-nutri.png",
       "categoria": "PROTEINA",
-      "url": "/produtos/blackskull_whey_900.html"
+      "url": "/produtos/blackskull_whey_900.html",
+      "peso": 1000,
+      "altura": 20,
+      "largura": 15,
+      "comprimento": 10,
+      "ncm": "2106.90.90",
+      "valor_declarado": 129.00
     },
     {
       "id": "blackskull_whey_900_refil",
       "nome": "Whey 100 HD 3W 900g REFIL - BLACKSKULL",
-      "descricao": "Suplemento de alta qualidade com blend de três tipos de whey protein: concentrado, isolado e hidrolisado. Ideal para recuperação muscular, ganho de massa magra e fortalecimento corporal. Rápida absorção, alto teor de aminoácidos essenciais e sabor excelente. Indicado para atletas e praticantes de atividade física que buscam desempenho e resultado.",
+      "descricao": "Suplemento de alta qualidade com blend...",
       "preco": 119.00,
       "imagem": "/images/blackskull_whey_100hd-900-refil.png",
       "imagemnutri": "/images/blackskull_whey_100HD-900g-nutri.png",
       "categoria": "PROTEINA",
-      "url": "/produtos/blackskull_whey_900_refil.html"
+      "url": "/produtos/blackskull_whey_900_refil.html",
+      "peso": 900,
+      "altura": 18,
+      "largura": 14,
+      "comprimento": 8,
+      "ncm": "2106.90.90",
+      "valor_declarado": 119.00
     },
-     {
+    {
       "id": "integralmedica_whey_900",
       "nome": "Whey Protein 100% concentrado 900g - Integral Médica",
-      "descricao": "A Integral Médica fabrica esse suplemento proteico de alta qualidade, elaborado com whey protein concentrado (WPC), ideal para promover ganho de massa muscular, recuperação pós-treino e manutenção da saúde. Rico em aminoácidos essenciais, com excelente digestibilidade e sabor agradável. Perfeito para quem busca desempenho e resultados consistentes.",
+      "descricao": "A Integral Médica fabrica esse suplemento...",
       "preco": 149.00,
       "imagem": "/images/integralmedica_whey_100_900g.png",
       "imagemnutri": "/images/blackskull_whey_100HD-900g-nutri.png",
       "categoria": "PROTEINA",
-      "url": "/produtos/integralmedica_whey_900.html"
+      "url": "/produtos/integralmedica_whey_900.html",
+      "peso": 950,
+      "altura": 19,
+      "largura": 15,
+      "comprimento": 9,
+      "ncm": "2106.90.90",
+      "valor_declarado": 149.00
     },
     {
       "id": "integralmedica_creatina_hardcore_300g",
       "nome": "Creatina 100% Pura 300g Hardcore - Integral Médica",
-      "descricao": "Potencialize sua força e desempenho com a Creatina Hardcore Integralmédica! Uma fórmula pura e eficaz, desenvolvida para aumentar a performance nos treinos de alta intensidade e auxiliar no ganho de massa muscular. Cada dose fornece creatina monohidratada de alta qualidade, promovendo mais explosão, resistência e recuperação muscular.\n\nBenefícios:\n\n- 100% Creatina Monohidratada pura\n- Aumenta a força e resistência física\n- Favorece o ganho de massa muscular\n- Melhora o desempenho em treinos intensos\n- Sem adição de açúcares, corantes ou conservantes\n\nPeso: 300g\nIndicado para: atletas e praticantes de atividades físicas que buscam mais resultados\n\nA escolha ideal para quem quer treinar com mais intensidade e conquistar resultados de verdade!",
+      "descricao": "Potencialize sua força e desempenho...",
       "preco": 99.00,
       "imagem": "/images/integralmedica_creatina_hardcore300g.png",
       "imagemnutri": "/images/integralmedica_creatina_hardcore300g_nutri.png",
@@ -51,11 +75,16 @@
       "imagem2": "/images/integralmedica_creatina_hardcore300g_2.png",
       "imagem3": "/images/integralmedica_creatina_hardcore300g_3.png",
       "categoria": "PROTEINA",
-      "url": "/produtos/integralmedica_creatina_hardcore_300g.html"
+      "url": "/produtos/integralmedica_creatina_hardcore_300g.html",
+      "peso": 350,
+      "altura": 15,
+      "largura": 10,
+      "comprimento": 5,
+      "ncm": "2106.90.90",
+      "valor_declarado": 99.00
     }
-
   ],
-  "promocoes":[
+  "promocoes": [
     {
       "id": "creatina-pretreino-coqueteleira",
       "nome": "Combo Imperdível",
@@ -64,8 +93,14 @@
       "imagem": "images/combo1.png",
       "imagemnutri": "images/blackskull_creatina_300-nutri.png",
       "categoria": "proteina",
-      "url": "/produtos/produto.html?id=combo"
+      "url": "/produtos/produto.html?id=combo",
+      "peso": 800,
+      "altura": 25,
+      "largura": 18,
+      "comprimento": 12,
+      "ncm": "2106.90.90",
+      "valor_declarado": 170.00
     }
   ]
-  
 }
+

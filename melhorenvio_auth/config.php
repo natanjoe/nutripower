@@ -8,8 +8,8 @@ $base_url = $environment === 'sandbox'
     : 'https://www.melhorenvio.com.br';
 
 return [
-    'client_id' => '6064',
-    'client_secret' => 'ICA4PSBWGpKASNySoZYZ4BibXwnufyoOAylqdJxZ',
-    'redirect_uri' => 'https://db53-2804-7fa8-9081-e600-328c-f8b6-6e13-4b2c.ngrok-free.app/melhorenvio_auth/callback.php',
+    'client_id' => '6091',
+    'client_secret' => 'LoVG5JPJuIwm73zcV8gIr3PjdMOJAGEWBvbnHLHN',
+    'redirect_uri' => 'https://6cac-2804-7fa8-9081-e600-908e-2f0c-30ee-469b.ngrok-free.app/melhorenvio_auth/callback.php',
     'base_url' => $base_url,
 ];

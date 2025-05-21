@@ -34,19 +34,41 @@ if (!$freteData || !isset($freteData['rates']) || !is_array($freteData['rates'])
 
 $rates = [];
 
-// Mapeia cada opção para o formato esperado pelo Snipcart
 foreach ($freteData['rates'] as $frete) {
+    // Normaliza o nome para comparação
+    $nomeOriginal = strtolower(trim($frete['description'] ?? ''));
+    
+    // Substitui os nomes específicos
+    if ($nomeOriginal === '.com') {
+        $nomeSubstituto = 'Envio normal';
+    } elseif ($nomeOriginal === '.package') {
+        $nomeSubstituto = 'Envio expresso';
+    } else {
+        $nomeSubstituto = $frete['name'] ?? 'Frete';
+    }
+
+    // Monta o nome completo e o ID base
+    $descricaoOriginal = $frete['description'] ?? '';
+    $nomeCompleto = trim($nomeSubstituto . ' ' . $descricaoOriginal);
+    $idBase = strtolower(str_replace([' ', '.', ','], '_', $nomeCompleto));
+    $tipo = trim($frete['tipo'] ?? '');
+
     $rates[] = [
-        'name' => $frete['name'] ?? 'Frete',
+        'name' => $nomeCompleto,
         'provider' => $frete['provider'] ?? 'Frete',
         'cost' => (float)($frete['cost'] ?? 0),
-        'description' => $frete['description'] ?? '',
-        'id' => $frete['id'] ?? strtolower(str_replace(' ', '_', $frete['name'] ?? 'frete')),
-        'userDefinedId' => $frete['userDefinedId'] ?? strtolower(str_replace(' ', '_', $frete['name'] ?? 'frete')),
-        'guaranteedDaysToDelivery' => (int)($frete['guaranteedDaysToDelivery'] ?? 0),
+        'description' => $nomeCompleto,
+        'id' => $idBase,
+        'userDefinedId' => $idBase,
+        'guaranteedDaysToDelivery' => (int)($frete['guaranteed_days_to_delivery'] ?? 0),
+        "delivery_range" => [
+            "min" => intval($frete['delivery_range']['min'] ?? 0),
+            "max" => intval($frete['delivery_range']['max'] ?? 0)
+        ],
         'iconUrl' => $frete['iconUrl'] ?? null
     ];
 }
+
 
 // Retorna o JSON formatado para o Snipcart
 echo json_encode(['rates' => $rates]);
