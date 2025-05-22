@@ -11,97 +11,114 @@ function logErro($mensagem) {
     error_log("[$dataHora] $mensagem\n", 3, $arquivo);
 }
 
-function calcularFreteMelhorEnvio($cep_destino, $produtos) {
-    $cep_origem = '61658080'; // Seu CEP de origem
+/**
+ * Valida e formata os dados para a API do Melhor Envio
+ */
+function prepararDadosFrete($cep_destino, $produtos) {
+    // Validações básicas
+    if (empty($cep_destino)) {
+        throw new Exception("CEP destino não informado");
+    }
 
-    $payload = [
+    $cep_origem = '61658080'; // Substitua pelo seu CEP de origem
+    $cep_destino = preg_replace('/[^0-9]/', '', $cep_destino);
+
+    // Valores mínimos aceitos pelo Melhor Envio
+    $dimensoes_minimas = [
+        'width' => 11,  // Largura mínima 11cm
+        'height' => 2,   // Altura mínima 2cm
+        'length' => 16   // Comprimento mínimo 16cm
+    ];
+
+    $produtos_formatados = [];
+    foreach ($produtos as $item) {
+        // Campos obrigatórios com valores padrão
+        $peso = max(0.1, floatval($item['weight'] ?? 0.3)); // Mínimo 0.1kg (100g)
+        $largura = max($dimensoes_minimas['width'], floatval($item['width'] ?? 11));
+        $altura = max($dimensoes_minimas['height'], floatval($item['height'] ?? 5));
+        $comprimento = max($dimensoes_minimas['length'], floatval($item['length'] ?? 16));
+        $valor = floatval($item['price'] ?? 0);
+
+        $produtos_formatados[] = [
+            'id' => $item['id'] ?? uniqid(),
+            'weight' => $peso,
+            'width' => $largura,
+            'height' => $altura,
+            'length' => $comprimento,
+            'insurance_value' => $valor,
+            'quantity' => intval($item['quantity'] ?? 1)
+        ];
+    }
+
+    return [
         'from' => ['postal_code' => $cep_origem],
         'to' => ['postal_code' => $cep_destino],
-        'products' => $produtos,
-        'services' => [],
+        'products' => $produtos_formatados,
         'options' => [
             'receipt' => false,
             'own_hand' => false,
-            'collect' => false
+            'collect' => false,
+            'insurance_value' => array_sum(array_column($produtos_formatados, 'insurance_value'))
         ]
     ];
-
-    $base_url = getenv('MELHOR_ENVIO_API_URL');
-    $access_token = getenv('ACCESS_TOKEN');
-
-    $ch = curl_init("$base_url/api/v2/me/shipment/calculate");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        "Authorization: Bearer $access_token",
-        "Content-Type: application/json",
-        "Accept: application/json"
-    ]);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
-
-    $response = curl_exec($ch);
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    $curlError = curl_error($ch);
-    curl_close($ch);
-
-    if (!$response) {
-        logErro("Erro CURL: $curlError");
-        return null;
-    }
-
-    $data = json_decode($response, true);
-
-    if ($httpCode !== 200) {
-        logErro("HTTP $httpCode - Erro da API: " . print_r($data, true));
-        return null;
-    }
-
-    return $data;
 }
 
-// ================== EXECUÇÃO ====================
-try {
-    $cepDestino = $_GET['cep'] ?? '01001000';
+/**
+ * Função principal para cálculo de frete
+ */
+function calcularFreteMelhorEnvio($cep_destino, $produtos) {
+    try {
+        $payload = prepararDadosFrete($cep_destino, $produtos);
 
-    $produtos = [[
-        'weight' => 1,
-        'width' => 15,
-        'height' => 10,
-        'length' => 20,
-        'insurance_value' => 100.00,
-        'quantity' => 1
-    ]];
+        $base_url = getenv('MELHOR_ENVIO_API_URL');
+        $access_token = getenv('ACCESS_TOKEN');
 
-    $fretes = calcularFreteMelhorEnvio($cepDestino, $produtos);
-
-    if ($fretes) {
-        $resultado = ["rates" => []];
-
-        foreach ($fretes as $frete) {
-            $descricaoOriginal = strtolower($frete['name']);
-
-            if ($descricaoOriginal === '.com') {
-                $descricao = 'Envio expresso';
-            } elseif ($descricaoOriginal === '.package') {
-                $descricao = 'Envio normal';
-            } else {
-                $descricao = $frete['name'];
-            }
-
-            $resultado["rates"][] = [
-                "cost" => floatval($frete['price']),
-                "description" => $descricao,
-                "guaranteed_days_to_delivery" => intval($frete['delivery_time'] ?? 0),
-                "id" => $frete['id'],
-                "iconUrl" => $frete['company']['picture'] ?? null,
-                "name" => $frete['company']['name'] ?? null,
-            ];
+        if (empty($base_url) || empty($access_token)) {
+            throw new Exception("Configurações da API não encontradas");
         }
 
-        file_put_contents(__DIR__ . '/frete.json', json_encode($resultado, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-    } else {
-        logErro("Erro ao calcular o frete. Nenhum dado retornado.");
+        $ch = curl_init("$base_url/api/v2/me/shipment/calculate");
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => [
+                "Authorization: Bearer $access_token",
+                "Content-Type: application/json",
+                "Accept: application/json",
+                "User-Agent: SeuEcommerce/1.0"
+            ],
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => json_encode($payload),
+            CURLOPT_TIMEOUT => 15,
+            CURLOPT_SSL_VERIFYPEER => true
+        ]);
+
+        $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $curlError = curl_error($ch);
+        curl_close($ch);
+
+        // Tratamento de erros
+        if ($curlError) {
+            throw new Exception("Erro na requisição: $curlError");
+        }
+
+        if ($httpCode !== 200) {
+            $errorMsg = json_decode($response, true)['message'] ?? 'Erro desconhecido';
+            throw new Exception("API retornou HTTP $httpCode: $errorMsg");
+        }
+
+        $data = json_decode($response, true);
+
+        // Verifica estrutura da resposta
+        if (!is_array($data)) {
+            throw new Exception("Resposta da API em formato inválido");
+        }
+
+        return $data;
+
+    } catch (Exception $e) {
+        logErro("Erro ao calcular frete: " . $e->getMessage());
+        logErro("Payload enviado: " . json_encode($payload ?? []));
+        return null;
     }
-} catch (Throwable $e) {
-    logErro("Exceção capturada: " . $e->getMessage());
 }
