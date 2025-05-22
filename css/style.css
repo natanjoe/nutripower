@@ -342,7 +342,6 @@ section.visible {
 }
 
 .section-about h2 {
-  font-size: 2rem;
   color: #111;
   margin-bottom: 30px;
   text-align: center;
@@ -354,6 +353,31 @@ section.visible {
   font-size: 1.1rem;
   margin-bottom: 20px;
   text-align: justify;
+}
+
+.payment-methods {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.card-brands {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.card-brands svg,
+.card-brands img {
+  height: 25px;
+  width: auto;
+  filter: grayscale(0%);
+  transition: filter 0.3s;
+}
+
+.card-brands img:hover {
+  filter: grayscale(0%);
 }
 
 /* Responsivo */

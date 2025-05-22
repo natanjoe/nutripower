@@ -27,18 +27,19 @@
         "secoes": {
             "produtos": "Nossos Produtos",
             "promocoes": "Promoções",
-            "quemSomos": "Nosso propósito é oferecer produtos de alta qualidade que realmente fazem a diferença na rotina de quem busca uma vida mais ativa, equilibrada e com resultados visíveis. Reunimos em um só lugar uma seleção criteriosa de suplementos, acessórios e itens essenciais para o desenvolvimento físico, sempre com foco na segurança, eficiência e confiabilidade."
+            "quemSomos": "Nosso propósito é oferecer produtos de alta qualidade que realmente fazem a diferença na rotina de quem busca uma vida mais ativa, equilibrada e com resultados visíveis."
             ,
             "contato": "Contato"        
         },
         "contato": {
-                "instagram":"@suplementos_nutripower",
-                "facebook": "@suplementos_nutripower",
-                "email": "produtosnutripower@gmail.com",
-                "whatsapp": "(85)9823-67462"
+                
             },
         "footer": {
-            "copyright": "© NutriPower Produtos - Todos os direitos reservados"
+            "copyright": "© NutriPower Produtos - Todos os direitos reservados",
+            "instagram":"@suplementos_nutripower",
+            "facebook": "@suplementos_nutripower",
+            "email": "produtosnutripower@gmail.com",
+            "whatsapp": "(85)9823-67462"
         }
     },
     "en": {
@@ -67,10 +68,7 @@
             "contato": "Contact"
         },
         "contato": {
-                "instagram":"@suplementos_nutripower",
-                "facebook": "@suplementos_nutripower",
-                "email": "produtosnutripower@gmail.com",
-                "whatsapp": "(85)9823-67462"
+             
             },
         "footer": {
             "copyright": "© NutriPower Products - All rights reserved"
