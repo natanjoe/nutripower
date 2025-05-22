@@ -20,3 +20,19 @@
 [2025-05-21 23:59:18] Resposta enviada: {"rates":[{"id":3,"name":"Entrega Econ\u00f4mica","cost":14.58,"description":"Jadlog - Normal","guaranteedDaysToDelivery":3,"provider":"Jadlog","userDefinedId":3,"iconUrl":"https:\/\/sandbox.melhorenvio.com.br\/images\/shipping-companies\/jadlog.png"},{"id":4,"name":"Entrega R\u00e1pida","cost":16.29,"description":"Jadlog - Expresso","guaranteedDaysToDelivery":2,"provider":"Jadlog","userDefinedId":4,"iconUrl":"https:\/\/sandbox.melhorenvio.com.br\/images\/shipping-companies\/jadlog.png"}]}
 [2025-05-22 00:00:04] Dados enviados para cálculo: {"cep_destino":"61656245","produtos":[{"id":"blackskull_creatina_300","weight":0.35,"width":10,"height":15,"length":5,"price":64.9,"quantity":1}],"total_itens":1}
 [2025-05-22 00:00:05] Resposta enviada: {"rates":[{"id":3,"name":"Entrega Econ\u00f4mica","cost":14.58,"description":"Jadlog - Normal","guaranteedDaysToDelivery":3,"provider":"Jadlog","userDefinedId":3,"iconUrl":"https:\/\/sandbox.melhorenvio.com.br\/images\/shipping-companies\/jadlog.png"},{"id":4,"name":"Entrega R\u00e1pida","cost":16.29,"description":"Jadlog - Expresso","guaranteedDaysToDelivery":2,"provider":"Jadlog","userDefinedId":4,"iconUrl":"https:\/\/sandbox.melhorenvio.com.br\/images\/shipping-companies\/jadlog.png"}]}
+[2025-05-22 00:15:40] ERRO: Campo obrigatório faltando: weight
+[2025-05-22 00:15:40] DEBUG: Array
+(
+    [cep] => 61656245
+    [itens] => 1
+    [produtos_validos] => 0
+)
+
+[2025-05-22 00:16:23] ERRO: Campo obrigatório faltando: weight
+[2025-05-22 00:16:23] DEBUG: Array
+(
+    [cep] => 61656245
+    [itens] => 1
+    [produtos_validos] => 0
+)
+

@@ -10,6 +10,6 @@ $base_url = $environment === 'sandbox'
 return [
     'client_id' => '6091',
     'client_secret' => 'LoVG5JPJuIwm73zcV8gIr3PjdMOJAGEWBvbnHLHN',
-    'redirect_uri' => 'https://6cac-2804-7fa8-9081-e600-908e-2f0c-30ee-469b.ngrok-free.app/melhorenvio_auth/callback.php',
+    'redirect_uri' => 'https://www.produtosnutripower.com/melhorenvio_auth/callback.php',
     'base_url' => $base_url,
 ];
