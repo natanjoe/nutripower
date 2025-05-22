@@ -87,18 +87,37 @@ try {
     $fretes = calcularFreteMelhorEnvio($cep_destino, $produtos);
 
     // 9. Formatação da resposta
+    
     $response = ['rates' => []];
     if ($fretes && is_array($fretes)) {
         foreach ($fretes as $frete) {
             if (!isset($frete['id'], $frete['price'])) continue;
             
+            // Obtém o nome da transportadora
+            $transportadora = $frete['company']['name'] ?? 'Transportadora';
+            
+            // Tratamento dos nomes dos serviços
+            $nomeOriginal = strtolower($frete['name'] ?? '');
+            $nomeExibicao = match($nomeOriginal) {
+                '.com' => 'Entrega Rápida',
+                '.package' => 'Entrega Econômica',
+                default => $frete['name'] ?? $transportadora
+            };
+            
+            // Descrição completa com nome da transportadora
+            $descricao = match($nomeOriginal) {
+                '.com' => "$transportadora - Expresso",
+                '.package' => "$transportadora - Normal",
+                default => $transportadora . ($frete['name'] ? " - {$frete['name']}" : '')
+            };
+
             $response['rates'][] = [
                 'id' => $frete['id'],
-                'name' => $frete['name'] ?? $frete['company']['name'] ?? 'Transportadora',
+                'name' => $nomeExibicao,
                 'cost' => floatval($frete['price']),
-                'description' => $frete['name'] ?? 'Entrega padrão',
+                'description' => $descricao, // Agora mostra a transportadora + detalhes
                 'guaranteedDaysToDelivery' => intval($frete['delivery_time'] ?? 0),
-                'provider' => 'Melhor Envio',
+                'provider' => $transportadora, // Usa o nome real da transportadora
                 'userDefinedId' => $frete['id'],
                 'iconUrl' => $frete['company']['picture'] ?? null
             ];
